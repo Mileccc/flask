@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de inicio</title>
+  </head>
+  <body>
+    <h1>Usuarios</h1>
+    <ul>
+      {% for user in users %}
+      <li>
+        <a href="{{url_for('perfil_usuario', username=user[0])}}"
+          >{{user[0]}}</a
+        >
+      </li>
+      {%endfor%}
+    </ul>
+  </body>
+</html>

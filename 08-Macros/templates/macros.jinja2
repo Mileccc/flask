@@ -1,0 +1,14 @@
+{%macro lista_usuarios(lista_de_usuarios)%}
+    <ul>
+      {% for usuario, tipo in lista_de_usuarios %}
+      <li>
+        {{"[Administrador]" if tipo == "admin" else "[Usuario normal]"}} -
+        {{usuario}}
+      </li>
+      {%endfor%}
+    </ul>
+{%endmacro%}
+
+{%macro escribir_hola()%}
+    <p>Hola como estas</p>
+{%endmacro%}

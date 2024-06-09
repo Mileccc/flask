@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuarios</title>
+  </head>
+  <body>
+    {%set name = "Ana"%} {%set numero_usuarios = users | length%} {%set unidos =
+    users | join%}
+    <h2>Usuarios</h2>
+    {% if numero_usuarios > 0 %}
+    <p>Se encontraron {{numero_usuarios}} usuarios:</p>
+    <ul>
+      {% for user in users %}
+      <li>{{user}}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No se encontraron usuarios</p>
+    {% endif %}
+
+    <p>{{unidos+name}}</p>
+  </body>
+</html>
