@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equipos</title>
+  </head>
+  <body>
+    <h1>Campeones de la UEFA</h1>
+    <h2>Equipos con más titulos</h2>
+    <ul>
+      {% for team in teams %}
+      <li>{{team}}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Equipos con más titulos</h2>
+    <ul>
+      {% for team, titles in teams_dict.items() %}
+      <li>{{team}}: {{titles}}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

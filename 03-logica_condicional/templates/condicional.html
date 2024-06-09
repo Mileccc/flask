@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Condicionales</h1>
+    <h2>Comparaciones Básicas</h2>
+
+    {% if equipo == "Real" %}
+    <h3>Jugadores del Real Madrid</h3>
+    <ol>
+      <li>Courtois</li>
+      <li>Sergio Ramos</li>
+      <li>Modric</li>
+      <li>Valverde</li>
+      <li>Ronaldo</li>
+    </ol>
+    {% elif equipo == "Barcelona" %}
+    <h3>Jugadores del Barcelona</h3>
+    <ol>
+      <li>Messi</li>
+      <li>Ter Stegen</li>
+      <li>Alaba</li>
+      <li>De Jong</li>
+      <li>Marcelo</li>
+    </ol>
+
+    {% else %}
+    <h3>El equipo "{{equipo}}" no se encuentra en la base de datos</h3>
+
+    {% endif %}
+  </body>
+</html>
