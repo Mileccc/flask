@@ -1,0 +1,17 @@
+{%from "macros.html" import render_card%} {%call
+render_card(title="MiTarjeta")%}
+<p>Este es un contenido personalizado para la tarjeta.</p>
+<p>Otro párrafo con más información</p>
+{%endcall%} {%call render_card(title="Mis proyectos")%}
+<ul>
+  <li>Proyecto 1</li>
+  <li>Proyecto 2</li>
+</ul>
+
+{%endcall%} {%call render_card(title="Contacto")%}
+<ul>
+  <p>Email: usuario@explae.com</p>
+  <p>Teléfono: 123-456-789</p>
+</ul>
+{%endcall%} {%for card in cards%} {%call render_card(title=card.title)%}
+{{card.content | safe}} {%endcall%} {%endfor%}
